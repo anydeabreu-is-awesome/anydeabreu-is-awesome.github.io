@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atenea Studio · Estrategia para ser memorable</title>
+<meta name="description" content="Marca personal clara, auténtica y estratégica para profesionales y emprendedores.">
+<link rel="icon" type="image/png" href="icono.png">
+<link rel="apple-touch-icon" href="icono.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Atenea Studio · Estrategia para ser memorable">
+<meta property="og:description" content="Marca personal clara, auténtica y estratégica para profesionales y emprendedores.">
+<meta property="og:image" content="compartir.png">
+<meta property="og:locale" content="es_ES">
+<meta name="theme-color" content="#F8F4EF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap">
+<style>
+:root{--rosa:#D8A7B1;--nude:#EAD1D5;--marfil:#F8F4EF;--oro:#B6A15B;--oro-d:#7A6828;--tinta:#4A4238;--suave:#6B6258;--linea:#E4D9C4;--pad:clamp(20px,5vw,64px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--marfil);color:var(--tinta);font-family:'Montserrat',sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline;text-decoration-color:var(--oro);text-underline-offset:6px}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--oro-d);outline-offset:3px}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400;margin:0}
+p{margin:0}
+.wrap{max-width:1312px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.3em;color:var(--oro-d);margin-bottom:16px}
+.h2{font-size:clamp(34px,4.4vw,56px);line-height:1.1;max-width:760px}
+.sec{padding-top:clamp(64px,9vw,120px);padding-bottom:clamp(64px,9vw,120px)}
+.btn{display:inline-block;padding:18px 32px;border-radius:999px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.btn-fill{background:var(--rosa)}
+.btn-line{padding:17px 31px;border:1px solid var(--oro-d)}
+.circle{position:relative;display:block;border-radius:50%;overflow:hidden;background:#FBF5F1;flex:none}
+.circle img{position:absolute;left:-4%;top:-4%;width:108%;height:108%;max-width:none}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--rosa);padding:10px 16px;border-radius:999px;z-index:10}
+.skip:focus{left:8px}
+
+/* nav */
+header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;padding-top:20px;padding-bottom:20px}
+.brand{display:flex;align-items:center;gap:14px;font-size:14px;font-weight:600;letter-spacing:.28em}
+nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;font-size:13px;font-weight:500;letter-spacing:.04em}
+nav a{padding:10px 0}
+nav a.cta{padding:13px 24px;background:var(--rosa);border-radius:999px;font-weight:600;letter-spacing:.1em;font-size:12px;text-transform:uppercase}
+
+/* hero */
+.hero{display:flex;flex-wrap:wrap;align-items:center;gap:56px 64px;padding-top:clamp(32px,6vw,72px);padding-bottom:clamp(48px,7vw,96px)}
+.hero-text{flex:1 1 460px;min-width:0}
+.hero h1{font-size:clamp(44px,6.4vw,88px);line-height:1.04;letter-spacing:-.01em;margin-bottom:28px}
+.hero h1 em{color:#9A8636}
+.hero p.lead{max-width:560px;font-size:18px;line-height:1.65;margin-bottom:40px}
+.btns{display:flex;flex-wrap:wrap;gap:16px}
+.hero-logo{position:relative;flex:0 1 440px;width:100%;max-width:440px;aspect-ratio:1;margin:0 auto}
+.hero-logo .ring{position:absolute;inset:-20px;border:1px solid var(--oro);border-radius:50%;opacity:.7}
+.hero-logo .circle{position:absolute;inset:0}
+
+/* pilares */
+.pilares{border-top:1px solid var(--oro);border-bottom:1px solid var(--oro);padding:36px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:32px 24px}
+.pilar{flex:1 1 150px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;font-size:12px;font-weight:600;letter-spacing:.18em}
+.pilares-wrap{padding-bottom:clamp(56px,7vw,96px)}
+svg.i{fill:none;stroke:var(--oro-d);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+
+/* bandas */
+.band{padding:clamp(64px,9vw,120px) var(--pad)}
+.band-nude{background:var(--nude)}
+.statement{max-width:880px;margin:0 auto;text-align:center}
+.statement h2{font-style:italic;font-size:clamp(34px,4.8vw,60px);line-height:1.15;margin:28px 0 32px}
+.statement p{max-width:640px;margin:0 auto;font-size:18px;line-height:1.7}
+
+/* grids */
+.grid{display:grid;gap:24px}
+.g250{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.g280{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:#FFFDFB;border:1px solid var(--linea);border-radius:4px;padding:36px 32px}
+.card .n{font-family:'Playfair Display',serif;font-style:italic;font-size:56px;line-height:1;color:#9A8636;margin-bottom:20px}
+.card h3{font-weight:500;font-size:26px;margin-bottom:12px}
+.card p{font-size:16px;line-height:1.65}
+.serv{background:var(--marfil);border-radius:4px;padding:40px 36px;display:flex;flex-direction:column;gap:16px}
+.serv h3{font-weight:500;font-size:28px}
+.serv p.d{font-size:16px;line-height:1.65;flex-grow:1}
+.serv p.precio{font-size:14px;color:var(--suave)}
+.serv a{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:10px 0}
+
+/* sobre mí */
+.about{display:flex;flex-wrap:wrap;align-items:center;gap:56px 80px}
+.foto{flex:0 1 380px;width:100%;max-width:380px;margin:0 auto;aspect-ratio:4/5;border-radius:190px 190px 0 0;background:var(--nude);border:1px solid var(--oro);display:flex;align-items:center;justify-content:center;font-size:14px;letter-spacing:.08em;overflow:hidden}
+.foto img{width:100%;height:100%;object-fit:cover;display:block}
+.foto.cita{flex-direction:column;gap:24px;padding:48px 40px;text-align:center}
+.foto.cita p{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(28px,3vw,36px);line-height:1.25;letter-spacing:0}
+.foto.cita small{font-size:11px;font-weight:600;letter-spacing:.3em;color:var(--oro-d)}
+.about-text{flex:1 1 420px;min-width:0}
+.about-text h2{font-size:clamp(34px,4.4vw,56px);line-height:1.1;margin-bottom:28px}
+.about-text p{font-size:18px;line-height:1.7;margin-bottom:20px}
+.tags{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+.tags span{padding:10px 20px;border:1px solid var(--oro);border-radius:999px;font-size:14px}
+
+/* guía */
+.guia{background:var(--rosa);padding:clamp(64px,9vw,112px) var(--pad)}
+.guia-in{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:56px 80px}
+.cover{flex:0 1 300px;width:100%;max-width:300px;aspect-ratio:3/4;background:var(--marfil);border-radius:4px;padding:32px 28px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;text-align:center}
+.cover .k{font-size:11px;font-weight:600;letter-spacing:.3em;color:var(--oro-d);margin-bottom:8px}
+.cover .t{font-family:'Playfair Display',serif;font-size:36px;line-height:1.05;margin-bottom:14px}
+.cover .s{font-family:'Playfair Display',serif;font-style:italic;font-size:15px}
+.cover .h{font-size:10px;font-weight:600;letter-spacing:.22em;color:var(--oro-d)}
+.guia-text{flex:1 1 400px;min-width:0;max-width:560px}
+.guia-text h2{font-size:clamp(34px,4.2vw,52px);line-height:1.1;margin-bottom:20px}
+.guia-text p.d{font-size:17px;line-height:1.7;margin-bottom:32px}
+form{display:flex;flex-direction:column;gap:12px}
+form label{font-size:14px;font-weight:600}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+input[type=email]{flex:1 1 240px;min-width:0;min-height:52px;padding:0 20px;border:1px solid var(--tinta);border-radius:999px;background:#FFFDFB;font:16px 'Montserrat',sans-serif;color:var(--tinta)}
+input::placeholder{color:var(--suave)}
+button{min-height:52px;padding:0 32px;border:1px solid var(--oro-d);border-radius:999px;background:var(--marfil);font:600 13px 'Montserrat',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--tinta);cursor:pointer}
+.hp{position:absolute;left:-9999px}
+.nota{margin-top:20px;font-size:14px;line-height:1.6}
+
+/* instagram */
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:48px 0 40px}
+.tile{aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:32px;text-align:center}
+.tile p{font-family:'Playfair Display',serif;font-size:30px;line-height:1.15}
+.tile small{font-size:11px;font-weight:600;letter-spacing:.22em}
+
+/* contacto + footer */
+.final{text-align:center}
+.final h2{font-style:italic;font-size:clamp(38px,5.4vw,68px);line-height:1.08;margin:24px 0 20px}
+.final p.l{font-size:18px;line-height:1.7;margin-bottom:36px}
+footer{padding-top:56px;padding-bottom:40px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:32px}
+.f-brand{display:flex;align-items:center;gap:20px}
+.f-brand b{display:block;font-size:13px;font-weight:600;letter-spacing:.28em;margin-bottom:4px}
+.f-brand i{font-family:'Playfair Display',serif;font-size:16px}
+footer nav{font-size:14px}
+.legal{flex-basis:100%;padding-top:24px;border-top:1px solid var(--linea);font-size:13px;color:var(--suave)}
+</style>
+</head>
+<body>
+<a class="skip" href="#principal">Saltar al contenido</a>
+
+<header class="wrap">
+  <a href="#inicio" class="brand">
+    <span class="circle" style="width:48px;height:48px"><img src="icono.png" alt=""></span>
+    ATENEA STUDIO
+  </a>
+  <nav aria-label="Principal">
+    <a href="#metodo">Método</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#guia">Guía gratuita</a>
+    <a href="#contacto" class="cta">Hablemos</a>
+  </nav>
+</header>
+
+<main id="principal">
+<section id="inicio" class="wrap hero">
+  <div class="hero-text">
+    <p class="eyebrow" style="margin-bottom:24px">ATENEA STUDIO ✦</p>
+    <h1>Estrategia para ser <em>memorable.</em></h1>
+    <p class="lead">Ayudamos a profesionales y emprendedores a convertir su experiencia en una marca personal clara, auténtica y estratégica que conecta, posiciona y permanece.</p>
+    <div class="btns">
+      <a class="btn btn-fill" href="mailto:anydeabreu@gmail.com?subject=Primera%20llamada">Agenda una primera llamada</a>
+      <a class="btn btn-line" href="#guia">Descarga la guía gratis</a>
+    </div>
+  </div>
+  <div class="hero-logo">
+    <div class="ring"></div>
+    <div class="circle"><img src="logo.png" alt="Logo de Atenea Studio: perfil de Atenea con casco y rama de laurel dorada"></div>
+  </div>
+</section>
+
+<div class="wrap pilares-wrap">
+  <div class="pilares" role="list" aria-label="Nuestros pilares">
+    <div class="pilar" role="listitem">
+      <svg class="i" aria-hidden="true" viewBox="0 0 32 32" width="38" height="38"><path d="M6 7h20M8 7v18M16 7v18M24 7v18M5 25h22M4 28h24"/></svg>ESTRATEGIA</div>
+    <div class="pilar" role="listitem">
+      <svg class="i" aria-hidden="true" viewBox="0 0 32 32" width="38" height="38"><path d="M5 8a3 3 0 0 1 3-3h16a3 3 0 0 1 3 3v11a3 3 0 0 1-3 3H13l-6 5v-5H8a3 3 0 0 1-3-3z"/></svg>COMUNICACIÓN</div>
+    <div class="pilar" role="listitem">
+      <svg class="i" aria-hidden="true" viewBox="0 0 32 32" width="38" height="38"><path d="M27 5C15 6 8 13 7 23M27 5c0 9-6 15-15 16M12 18l8-8M7 23l-2 4"/></svg>STORYTELLING</div>
+    <div class="pilar" role="listitem">
+      <svg class="i" aria-hidden="true" viewBox="0 0 32 32" width="38" height="38"><path d="M16 4c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z"/></svg>POSICIONAMIENTO</div>
+    <div class="pilar" role="listitem">
+      <svg class="i" aria-hidden="true" viewBox="0 0 32 32" width="38" height="38"><path d="M8 28C10 18 14 11 22 5M12 22c-4-1-6-4-6-7 4 0 6 2 6 7zM15 16c-3-2-4-5-3-8 3 1 5 4 3 8zM19 11c-1-3 0-6 3-8 1 3 0 6-3 8zM13 24c4 0 7-2 8-6-4 0-7 2-8 6z"/></svg>MEMORABILIDAD</div>
+  </div>
+</div>
+
+<section class="band band-nude">
+  <div class="statement">
+    <svg class="i" aria-hidden="true" viewBox="0 0 32 32" width="28" height="28"><path d="M16 3c1 7 5 11 13 13-8 2-12 6-13 13-1-7-5-11-13-13 8-2 12-6 13-13z"/></svg>
+    <h2>Sin estrategia, la creatividad no funciona.</h2>
+    <p>Veo marcas con un feed precioso que no saben quién les sigue, y contenido muy elaborado que no genera ni una conversación. La creatividad importa mucho. Pero sin estrategia, es solo ruido bonito.</p>
+  </div>
+</section>
+
+<section id="metodo" class="wrap sec">
+  <p class="eyebrow">EL MÉTODO</p>
+  <h2 class="h2" style="margin-bottom:20px">Cuatro pasos antes de diseñar un solo post.</h2>
+  <p style="max-width:600px;font-size:17px;line-height:1.7;margin-bottom:56px">Es lo mismo que trabajamos juntas en una asesoría: primero la dirección, después todo lo demás.</p>
+  <div class="grid g250">
+    <article class="card"><p class="n">1</p><h3>Dirección</h3><p>¿Hacia dónde va tu marca y a quién le hablas? Una declaración clara que orienta cada decisión.</p></article>
+    <article class="card"><p class="n">2</p><h3>Voz</h3><p>Lo que dices que nadie más dice igual. Un tono propio que suena a ti, no a una agencia.</p></article>
+    <article class="card"><p class="n">3</p><h3>Ritmo</h3><p>Un plan de contenido que puedes sostener de verdad: menos piezas, más intención.</p></article>
+    <article class="card"><p class="n">4</p><h3>Resultados</h3><p>Medimos lo que importa: las personas correctas escribiéndote, no solo los likes.</p></article>
+  </div>
+</section>
+
+<section id="servicios" class="band band-nude">
+  <div style="max-width:1312px;margin:0 auto">
+    <p class="eyebrow" style="color:var(--tinta)">SERVICIOS</p>
+    <h2 class="h2" style="margin-bottom:56px">Cómo podemos trabajar juntas.</h2>
+    <div class="grid g280">
+      <article class="serv">
+        <h3>Asesoría de marca</h3>
+        <p class="d">Una conversación a fondo sobre dirección, voz y posicionamiento, con un plan claro para empezar.</p>
+        <p class="precio">Inversión: desde 120 USD</p>
+        <a href="mailto:anydeabreu@gmail.com?subject=Asesor%C3%ADa">Quiero una asesoría →</a>
+      </article>
+      <article class="serv">
+        <h3>Estrategia de contenido</h3>
+        <p class="d">Un mes de contenido con hilo conductor: temas, formatos y calendario pensados para tu ritmo real.</p>
+        <p class="precio">Inversión: desde 350 USD</p>
+        <a href="mailto:anydeabreu@gmail.com?subject=Estrategia%20de%20contenido">Quiero mi plan →</a>
+      </article>
+      <article class="serv">
+        <h3>Storytelling de marca</h3>
+        <p class="d">Tu historia, tu criterio y tu experiencia convertidos en mensajes que conectan y se recuerdan.</p>
+        <p class="precio">Inversión: desde 450 USD</p>
+        <a href="mailto:anydeabreu@gmail.com?subject=Storytelling">Quiero contar mi historia →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="sobre-mi" class="wrap sec about">
+  <!-- Cuando tengas tu foto: súbela como foto.jpg y cambia la línea de abajo por:
+       <div class="foto"><img src="foto.jpg" alt="Ana Victoria de Abreu"></div>  (en lugar del bloque "foto cita") -->
+  <div class="foto cita" aria-hidden="true">
+    <svg class="i" viewBox="0 0 32 32" width="28" height="28"><path d="M16 3c1 7 5 11 13 13-8 2-12 6-13 13-1-7-5-11-13-13 8-2 12-6 13-13z"/></svg>
+    <p>Primero la dirección, después todo lo demás.</p>
+    <small>ATENEA STUDIO</small>
+  </div>
+  <div class="about-text">
+    <p class="eyebrow">SOBRE MÍ</p>
+    <h2>Hola, soy Ana Victoria.</h2>
+    <p>Soy estratega digital y storyteller de marcas. Mi trabajo empieza antes del diseño y del calendario de contenido: con las preguntas que casi nadie se hace sobre su propia marca.</p>
+    <p>Llegué a la estrategia de marca después de ver a demasiadas personas brillantes pasar desapercibidas: con talento, con experiencia, pero sin las palabras para contarlo. Hoy acompaño a profesionales y emprendedores a encontrar esas palabras y a convertirlas en una marca que se recuerda.</p>
+    <div class="tags"><span>Cálida pero con criterio</span><span>Primera persona, siempre</span><span>Un solo registro</span></div>
+  </div>
+</section>
+
+<section id="guia" class="guia">
+  <div class="guia-in">
+    <div class="cover" aria-hidden="true">
+      <span class="circle" style="width:84px;height:84px"><img src="logo.png" alt=""></span>
+      <div>
+        <p class="k">LA GUÍA DE</p>
+        <p class="t">Marca Memorable</p>
+        <p class="s">Dirección · Voz · Ritmo · Resultados</p>
+      </div>
+      <p class="h">@ATENEA.STUDIO</p>
+    </div>
+    <div class="guia-text">
+      <p class="eyebrow" style="color:var(--tinta)">GUÍA GRATUITA</p>
+      <h2>Todo lo que hago parte de aquí.</h2>
+      <p class="d">Diez páginas con el método que sigo con cada marca antes de empezar: cinco preguntas, ejercicios de voz, un plan de contenido y una tabla de seguimiento.</p>
+      <!-- El formulario usa FormSubmit (gratis, sin cuenta): cada correo te llega a anydeabreu@gmail.com.
+           La primera vez que alguien lo use, FormSubmit te enviará un correo para activarlo: confírmalo. -->
+      <form action="https://formsubmit.co/anydeabreu@gmail.com" method="post">
+        <input type="hidden" name="_subject" value="Nueva solicitud de la Guía Marca Memorable">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <label for="correo">Tu correo</label>
+        <div class="row">
+          <input id="correo" name="email" type="email" placeholder="tu@correo.com" autocomplete="email" required>
+          <button type="submit">Quiero la guía</button>
+        </div>
+      </form>
+      <p class="nota">O escribe <strong>GUÍA</strong> por mensaje directo en @atenea.studio y te la envío hoy.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap sec">
+  <p class="eyebrow">EN INSTAGRAM</p>
+  <h2 class="h2">La estrategia, aplicada cada semana.</h2>
+  <div class="tiles">
+    <div class="tile" style="background:var(--rosa)">
+      <span aria-hidden="true" style="width:1px;height:36px;background:var(--tinta)"></span>
+      <p>No necesitas publicar más.</p>
+      <small>NECESITAS TENER ALGO CLARO QUE DECIR.</small>
+    </div>
+    <div class="tile" style="background:#F0E8D5;border:1px solid var(--linea)">
+      <p style="font-style:italic;font-size:34px">Estrategia con alma.</p>
+    </div>
+    <div class="tile" style="background:var(--nude)">
+      <p style="font-size:28px;line-height:1.2">La creatividad sin dirección <em>es ruido bonito.</em></p>
+      <span aria-hidden="true" style="width:40px;height:1px;background:var(--oro-d)"></span>
+    </div>
+  </div>
+  <a class="btn btn-line" href="https://instagram.com/atenea.studio" target="_blank" rel="noopener">Seguir @atenea.studio</a>
+</section>
+
+<section id="contacto" class="band band-nude final" style="padding-top:clamp(72px,10vw,128px);padding-bottom:clamp(72px,10vw,128px)">
+  <div style="max-width:720px;margin:0 auto">
+    <svg class="i" aria-hidden="true" viewBox="0 0 32 32" width="28" height="28"><path d="M16 3c1 7 5 11 13 13-8 2-12 6-13 13-1-7-5-11-13-13 8-2 12-6 13-13z"/></svg>
+    <h2>¿Hablamos de tu marca?</h2>
+    <p class="l">Sin presión, solo una conversación real.</p>
+    <a class="btn btn-fill" style="padding:18px 36px" href="mailto:anydeabreu@gmail.com?subject=Primera%20llamada">Agenda una primera llamada</a>
+    <p style="margin-top:28px;font-size:15px"><a href="mailto:anydeabreu@gmail.com">anydeabreu@gmail.com</a> · <a href="https://instagram.com/atenea.studio" target="_blank" rel="noopener">@atenea.studio</a></p>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="f-brand">
+    <span class="circle" style="width:72px;height:72px"><img src="logo.png" alt="Logo de Atenea Studio"></span>
+    <div><b>ATENEA STUDIO</b><i>Estrategia para ser memorable.</i></div>
+  </div>
+  <nav aria-label="Pie de página">
+    <a href="#metodo">Método</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#guia">Guía gratuita</a>
+    <a href="https://instagram.com/atenea.studio" target="_blank" rel="noopener">Instagram</a>
+  </nav>
+  <p class="legal">© 2026 Atenea Studio · Ana Victoria de Abreu</p>
+</footer>
+
+</body>
+</html>
