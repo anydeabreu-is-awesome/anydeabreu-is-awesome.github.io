@@ -80,11 +80,35 @@ svg.i{fill:none;stroke:var(--oro-d);stroke-width:1.4;stroke-linecap:round;stroke
 .card .n{font-family:'Playfair Display',serif;font-style:italic;font-size:56px;line-height:1;color:#9A8636;margin-bottom:20px}
 .card h3{font-weight:500;font-size:26px;margin-bottom:12px}
 .card p{font-size:16px;line-height:1.65}
-.serv{background:var(--marfil);border-radius:4px;padding:40px 36px;display:flex;flex-direction:column;gap:16px}
-.serv h3{font-weight:500;font-size:28px}
-.serv p.d{font-size:16px;line-height:1.65;flex-grow:1}
-.serv p.precio{font-size:14px;color:var(--suave)}
-.serv a{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:10px 0}
+.serv-intro{display:flex;flex-wrap:wrap;gap:24px 80px;align-items:flex-end;margin-bottom:56px}
+.serv-intro>div{flex:1 1 420px;min-width:0}
+.serv-intro h2 em{color:#9A8636}
+.serv-intro-t p{font-size:17px;line-height:1.7;margin-bottom:14px}
+.serv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr));gap:24px}
+.serv{background:var(--marfil);border-radius:4px;padding:clamp(28px,4vw,44px);display:flex;flex-direction:column;gap:14px}
+.serv-top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;padding-bottom:14px;border-bottom:1px solid var(--oro)}
+.serv-n{font-family:'Playfair Display',serif;font-style:italic;font-size:40px;line-height:1;color:#9A8636}
+.serv .precio{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.serv h3{font-weight:500;font-size:30px;margin-top:6px}
+.lema{font-family:'Playfair Display',serif;font-style:italic;font-size:20px;line-height:1.4;color:#9A8636}
+.serv p.d{font-size:16px;line-height:1.65}
+.sub-t{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--oro-d);margin-top:8px}
+.lista,.pasos{margin:0;padding:0;font-size:15px;line-height:1.55}
+.lista{list-style:none}
+.lista li{position:relative;padding-left:24px;margin-bottom:8px}
+.lista li::before{content:"✦";position:absolute;left:0;top:0;font-size:12px;color:var(--oro-d)}
+.pasos{padding-left:22px}
+.pasos li{margin-bottom:10px;padding-left:4px}
+.pasos li::marker{font-family:'Playfair Display',serif;color:#9A8636;font-weight:500}
+.ideal{font-size:15px;line-height:1.6;background:#FFFDFB;border-left:2px solid var(--oro);padding:14px 18px;margin-top:6px}
+.serv .btn{align-self:flex-start;margin-top:auto;text-align:center}
+.serv .ideal{margin-bottom:14px}
+.serv-duda p.lema{font-size:20px}
+.serv-duda{margin-top:48px;padding:clamp(28px,4vw,48px);border:1px solid var(--oro);border-radius:4px;display:flex;flex-wrap:wrap;gap:24px 64px}
+.serv-duda>div{flex:1 1 380px;min-width:0}
+.serv-duda h3{font-size:clamp(28px,3vw,38px);line-height:1.15;margin-bottom:12px}
+.serv-duda p{font-size:16px;line-height:1.7;margin-bottom:16px}
+.serv-duda .btn{margin-top:6px}
 
 /* sobre mí */
 .about{display:flex;flex-wrap:wrap;align-items:center;gap:56px 80px}
@@ -223,27 +247,69 @@ footer nav{font-size:14px}
 
 <section id="servicios" class="band band-nude">
   <div style="max-width:1312px;margin:0 auto">
-    <p class="eyebrow" style="color:var(--tinta)">SERVICIOS</p>
-    <h2 class="h2" style="margin-bottom:56px">Cómo podemos trabajar juntas.</h2>
-    <div class="grid g280">
+    <div class="serv-intro">
+      <div>
+        <p class="eyebrow" style="color:var(--tinta)">SERVICIOS</p>
+        <h2 class="h2">Estrategia con intención. <em>Comunicación con propósito.</em></h2>
+      </div>
+      <div class="serv-intro-t">
+        <p>Cada marca tiene una historia, una personalidad y unos objetivos propios. Por eso, en Atenea Studio no trabajo con fórmulas universales, sino con estrategias pensadas para las necesidades de cada proyecto.</p>
+        <p>Acompaño a profesionales, emprendedores y marcas que quieren comunicar con mayor claridad, encontrar su diferencial y construir una presencia digital coherente y memorable.</p>
+        <p><strong>Puedes elegir uno de los servicios o combinar distintas áreas de trabajo según lo que tu marca necesite.</strong></p>
+      </div>
+    </div>
+    <div class="serv-grid">
       <article class="serv">
+        <div class="serv-top"><span class="serv-n">01</span><span class="precio">Desde 120 USD</span></div>
         <h3>Asesoría de marca</h3>
-        <p class="d">Una conversación a fondo sobre dirección, voz y posicionamiento, con un plan claro para empezar.</p>
-        <p class="precio">Inversión: desde 120 USD</p>
-        <a href="mailto:anydeabreu@gmail.com?subject=Asesor%C3%ADa">Quiero una asesoría →</a>
+        <p class="lema">Encuentra la dirección de tu marca.</p>
+        <p class="d">Una marca necesita tener claro quién es, qué quiere comunicar y a quién quiere llegar. Esta asesoría está pensada para ayudarte a ordenar tus ideas, identificar oportunidades y tomar decisiones estratégicas sobre tu comunicación.</p>
+        <p class="sub-t">¿Qué trabajaremos?</p>
+        <ul class="lista"><li>Análisis de la situación actual de tu marca.</li><li>Revisión de identidad, comunicación y posicionamiento.</li><li>Identificación de fortalezas y oportunidades de mejora.</li><li>Definición de prioridades y objetivos de comunicación.</li><li>Recomendaciones estratégicas adaptadas a tu proyecto.</li><li>Hoja de ruta con acciones y próximos pasos.</li></ul>
+        <p class="ideal"><strong>Ideal para:</strong> profesionales y emprendedores que tienen un proyecto en marcha, pero necesitan claridad, dirección y una mirada estratégica para avanzar.</p>
+        <a class="btn btn-fill" href="mailto:anydeabreu@gmail.com?subject=Asesor%C3%ADa%20de%20marca">Quiero asesorar mi marca</a>
       </article>
       <article class="serv">
+        <div class="serv-top"><span class="serv-n">02</span><span class="precio">Desde 350 USD</span></div>
         <h3>Estrategia de contenido</h3>
-        <p class="d">Un mes de contenido con hilo conductor: temas, formatos y calendario pensados para tu ritmo real.</p>
-        <p class="precio">Inversión: desde 350 USD</p>
-        <a href="mailto:anydeabreu@gmail.com?subject=Estrategia%20de%20contenido">Quiero mi plan →</a>
+        <p class="lema">Deja de publicar por publicar. Empieza a comunicar con intención.</p>
+        <p class="d">El contenido debe responder a una estrategia, no a la necesidad de llenar un calendario. Trabajaremos para que tu comunicación tenga coherencia, personalidad y una dirección clara.</p>
+        <p class="sub-t">¿Qué trabajaremos?</p>
+        <ul class="lista"><li>Análisis de tu marca, objetivos y audiencia.</li><li>Definición de pilares y líneas de contenido.</li><li>Identificación de temas y mensajes clave.</li><li>Desarrollo de una propuesta editorial alineada con tu identidad.</li><li>Planificación estratégica de contenido para un mes.</li><li>Calendario editorial con formatos y frecuencia sugerida.</li><li>Recomendaciones para mantener una comunicación consistente.</li></ul>
+        <p class="ideal"><strong>Ideal para:</strong> marcas y profesionales que quieren organizar su presencia digital, comunicar de forma más estratégica y conectar con las personas adecuadas.</p>
+        <a class="btn btn-fill" href="mailto:anydeabreu@gmail.com?subject=Estrategia%20de%20contenido">Quiero mi estrategia de contenido</a>
       </article>
       <article class="serv">
+        <div class="serv-top"><span class="serv-n">03</span><span class="precio">Desde 450 USD</span></div>
         <h3>Storytelling de marca</h3>
-        <p class="d">Tu historia, tu criterio y tu experiencia convertidos en mensajes que conectan y se recuerdan.</p>
-        <p class="precio">Inversión: desde 450 USD</p>
-        <a href="mailto:anydeabreu@gmail.com?subject=Storytelling">Quiero contar mi historia →</a>
+        <p class="lema">Tu marca tiene algo que contar. Vamos a encontrar la manera de comunicarlo.</p>
+        <p class="d">Cada marca tiene una historia, una experiencia y una forma particular de hacer las cosas. El storytelling permite transformar esos elementos en mensajes que transmitan personalidad, conecten con las personas y ayuden a diferenciarte.</p>
+        <p class="sub-t">¿Qué trabajaremos?</p>
+        <ul class="lista"><li>Exploración de la historia y esencia de tu marca.</li><li>Identificación de valores, personalidad y atributos diferenciales.</li><li>Definición de tu propuesta de valor y mensaje principal.</li><li>Desarrollo de una narrativa de marca.</li><li>Definición del tono de voz y estilo de comunicación.</li><li>Creación de mensajes clave para comunicar quién eres, qué haces y qué te diferencia.</li><li>Recomendaciones para aplicar tu narrativa en los canales digitales.</li></ul>
+        <p class="ideal"><strong>Ideal para:</strong> marcas personales, profesionales y negocios que necesitan comunicar mejor su historia, transmitir su diferencial y construir una identidad verbal reconocible.</p>
+        <a class="btn btn-fill" href="mailto:anydeabreu@gmail.com?subject=Storytelling%20de%20marca">Quiero contar mejor mi marca</a>
       </article>
+      <article class="serv">
+        <div class="serv-top"><span class="serv-n">04</span><span class="precio">Presupuesto a medida</span></div>
+        <h3>Servicio personalizado</h3>
+        <p class="lema">Porque no todas las marcas necesitan lo mismo.</p>
+        <p class="d">Hay proyectos que necesitan trabajar su estrategia desde cero. Otros necesitan redefinir su posicionamiento, mejorar su comunicación, desarrollar su contenido o combinar diferentes áreas. Si tu marca tiene una necesidad específica o buscas un acompañamiento que no encaja exactamente en los servicios anteriores, podemos diseñar una propuesta a medida.</p>
+        <p class="sub-t">¿Cómo funciona?</p>
+        <ol class="pasos"><li><strong>Primera conversación:</strong> conocemos tu proyecto, su situación actual y lo que quieres conseguir.</li><li><strong>Análisis de necesidades:</strong> identificamos las áreas que necesitan atención y las oportunidades de mejora.</li><li><strong>Propuesta estratégica:</strong> definimos el alcance del trabajo, los servicios, los entregables y los tiempos.</li><li><strong>Acompañamiento:</strong> desarrollamos el trabajo de acuerdo con los objetivos y necesidades de tu marca.</li></ol>
+        <p class="ideal"><strong>Ideal para:</strong> proyectos que necesitan soluciones específicas, combinaciones de servicios o un acompañamiento estratégico adaptado a su etapa y objetivos.</p>
+        <a class="btn btn-fill" href="mailto:anydeabreu@gmail.com?subject=Servicio%20personalizado">Diseñemos una propuesta para mi marca</a>
+      </article>
+    </div>
+    <div class="serv-duda">
+      <div>
+        <h3>¿No sabes qué servicio necesita tu marca?</h3>
+        <p class="lema">No tienes que tener todas las respuestas antes de empezar.</p>
+      </div>
+      <div>
+        <p>Cuéntame qué estás construyendo, en qué punto se encuentra tu proyecto y qué te gustaría conseguir. Juntas podremos identificar qué necesita tu marca y cuál es el mejor camino para trabajarla.</p>
+        <p><strong>Agenda una primera conversación.</strong> Sin presión. Sin fórmulas preestablecidas. Solo una conversación para entender tu proyecto y encontrar el enfoque adecuado.</p>
+        <a class="btn btn-line" href="mailto:anydeabreu@gmail.com?subject=Primera%20conversaci%C3%B3n">Hablemos de tu marca</a>
+      </div>
     </div>
   </div>
 </section>
