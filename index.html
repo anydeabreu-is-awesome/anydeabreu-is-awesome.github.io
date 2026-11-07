@@ -394,7 +394,7 @@ footer nav{font-size:14px}
       <p class="d">Una guía práctica con el método que sigo con cada marca antes de empezar: cinco preguntas, ejercicios de voz, un plan de contenido y una tabla de seguimiento.</p>
       <!-- El formulario usa FormSubmit (gratis, sin cuenta): cada correo te llega a hola@byatenea.studio.
            La primera vez que alguien lo use, FormSubmit te enviará un correo para activarlo: confírmalo. -->
-      <form id="form-guia" action="https://formsubmit.co/anydeabreu@gmail.com" method="post">
+      <form id="form-guia" action="https://formsubmit.co/hola@byatenea.studio" method="post">
         <input type="hidden" name="_subject" value="Nueva solicitud de la Guía Marca Memorable">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
@@ -473,7 +473,7 @@ footer nav{font-size:14px}
     var datos={}; new FormData(f).forEach(function(v,k){datos[k]=v;});
     delete datos._next;
     var btn=f.querySelector('button'); btn.disabled=true; btn.textContent='Enviando…';
-    fetch('https://formsubmit.co/ajax/anydeabreu@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(datos)})
+    fetch('https://formsubmit.co/ajax/hola@byatenea.studio',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(datos)})
       .catch(function(){})
       .then(function(){f.style.display='none';ok.classList.add('visible');ok.querySelector('a').focus();});
   });
