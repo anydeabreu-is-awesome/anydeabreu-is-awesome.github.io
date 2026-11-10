@@ -392,14 +392,14 @@ footer nav{font-size:14px}
       <p class="eyebrow" style="color:var(--tinta)">GUÍA GRATUITA</p>
       <h2>Todo lo que hago parte de aquí.</h2>
       <p class="d">Una guía práctica con el método que sigo con cada marca antes de empezar: cinco preguntas, ejercicios de voz, un plan de contenido y una tabla de seguimiento.</p>
-      <!-- El formulario usa FormSubmit (gratis, sin cuenta): cada correo te llega a hola@byatenea.studio.
+      <!-- El formulario usa FormSubmit (gratis, sin cuenta): cada aviso llega a hola@byatenea.studio (el código de abajo lo representa).
            La primera vez que alguien lo use, FormSubmit te enviará un correo para activarlo: confírmalo. -->
-      <form id="form-guia" action="https://formsubmit.co/hola@byatenea.studio" method="post">
+      <form id="form-guia" action="https://formsubmit.co/c598c7952dbb104080039571ee606415" method="post">
         <input type="hidden" name="_subject" value="Nueva solicitud de la Guía Marca Memorable">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://byatenea.studio/gracias.html">
-        <input type="hidden" name="_autoresponse" value="¡Hola! Gracias por pedir La Guía de Marca Memorable. Aquí la tienes para descargar: https://byatenea.studio/guia-marca-memorable.pdf — Te recomiendo hacer una parte por semana y responder por escrito. Si cuando termines quieres que trabajemos tu marca juntos, responde a este correo o escríbeme ASESORÍA por mensaje directo en @byatenea.studio. Con cariño, Ana Victoria · Atenea Studio">
+        <input type="hidden" name="_autoresponse" value="¡Hola! Tu guía ya está aquí ✦ — Gracias por descargar La Guía de Marca Memorable. Aquí la tienes: https://byatenea.studio/guia-marca-memorable.pdf — (Si prefieres leerla en inglés: https://byatenea.studio/memorable-brand-guide.pdf) — Un consejo antes de empezar: no intentes hacerla toda de golpe. Una parte por semana y siempre por escrito. Si te atascas, mira el ejemplo de Laura en la página 14: verás cómo queda cada parte rellenada. — Y cuéntame: ¿cuál de los 5 errores de la página 4 sentiste más tuyo? Responde a este correo, leo todos los mensajes. — Cuando tengas tus respuestas y quieras que trabajemos tu marca juntos, escríbeme. Sin presión, solo una conversación real. — Con cariño, Ana Victoria de Abreu Estratega Digital & Storyteller · Fundadora de Atenea Studio Estrategia para ser memorable. — hola@byatenea.studio byatenea.studio · @byatenea.studio">
         <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <label for="correo">Tu correo</label>
         <div class="row">
@@ -472,8 +472,9 @@ footer nav{font-size:14px}
     if(!f.checkValidity()){f.reportValidity();return;}
     var datos={}; new FormData(f).forEach(function(v,k){datos[k]=v;});
     delete datos._next;
+    datos._autoresponse="¡Hola! Tu guía ya está aquí ✦\n\nGracias por descargar La Guía de Marca Memorable. Aquí la tienes:\nhttps://byatenea.studio/guia-marca-memorable.pdf\n\n(Si prefieres leerla en inglés: https://byatenea.studio/memorable-brand-guide.pdf)\n\nUn consejo antes de empezar: no intentes hacerla toda de golpe. Una parte por semana y siempre por escrito. Si te atascas, mira el ejemplo de Laura en la página 14: verás cómo queda cada parte rellenada.\n\nY cuéntame: ¿cuál de los 5 errores de la página 4 sentiste más tuyo? Responde a este correo, leo todos los mensajes.\n\nCuando tengas tus respuestas y quieras que trabajemos tu marca juntos, escríbeme. Sin presión, solo una conversación real.\n\nCon cariño,\nAna Victoria de Abreu\nEstratega Digital & Storyteller · Fundadora de Atenea Studio\nEstrategia para ser memorable.\n\nhola@byatenea.studio\nbyatenea.studio · @byatenea.studio";
     var btn=f.querySelector('button'); btn.disabled=true; btn.textContent='Enviando…';
-    fetch('https://formsubmit.co/ajax/hola@byatenea.studio',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(datos)})
+    fetch('https://formsubmit.co/ajax/c598c7952dbb104080039571ee606415',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(datos)})
       .catch(function(){})
       .then(function(){f.style.display='none';ok.classList.add('visible');ok.querySelector('a').focus();});
   });
